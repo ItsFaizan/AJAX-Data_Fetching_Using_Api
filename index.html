@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Table</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>Add Data</h1>
+
+    <button class="btn btn-danger" id="toggle-form">Form</button>
+    <form id="data-form" style="display:none">
+      <div class="form-group">
+        <input placeholder ="User_ID" type="number" class="form-control" id="userId" name="userId" required>
+      </div>
+      <div class="form-group">
+        <input placeholder ="id" type="number" class="form-control" id="id" name="id" required>
+      </div>
+      <div class="form-group">
+        <input placeholder ="title" type="text" class="form-control" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <input placeholder ="completed" type="text" class="form-control" id="completed" name="completed" required>
+      </div>
+     
+      <button type="submit" class="btn btn-success">Add Data</button>
+    </form>
+    <hr>
+    <h1>Table</h1>
+    <button id="toggle-table" class="btn btn-primary">Open Table</button>
+  <h1></h1>
+    <table class="table table-sm table-dark">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody id="data-table-body">
+      </tbody>
+    </table>
+  </div>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="app.js"></script>
+</body>
+</html>
